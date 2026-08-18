@@ -123,7 +123,7 @@ body {
 				.content-txt-wrap>ul>li>h3{padding:30px 0; font-size:55px; font-weight:700;}
 				.content-txt-wrap>ul>li>h4{padding-bottom:10px; font-size:25px; font-weight:600;}
 				/* .content-txt-wrap>ul>li>p{padding:8px 0; font-size:16px;} */
-				.content-txt-wrap>ul>li>a{display:inline-block; width:50%; margin-top:20px; padding:18px 30px; font-size:16px; color:#fff; background:#e13838; transition:all 0.5s;}
+				.content-txt-wrap>ul>li>a{display:inline-block; width:51%; margin-top:20px; padding:18px 30px; font-size:16px; color:#fff; background:#e13838; transition:all 0.5s;}
 				.content-txt-wrap>ul>li>a:hover{color:#333; background:#fff; border:1px solid #e13838; transition:all 0.5s;}
 				
 					.subpageLink{width:100%;}
