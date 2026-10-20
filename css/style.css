@@ -189,15 +189,16 @@ strong {
   letter-spacing: .11em;
 }
 .hero h1 {
-  font: 800 clamp(55px, 7.7vw, 120px)/1.08 var(--font-en);
-  letter-spacing: -.075em;
+  font: 700 clamp(55px, 7.7vw, 120px)/1.08 var(--font-en);
+  letter-spacing: -.0em;
 }
 .hero-heading-second {
   white-space: nowrap;
 }
 .hero h1 em {
   font-style: normal;
-  color: #9b9d98;
+  /* color: #9b9d98;*/
+   color: var(--accent);
 }
 .hero-bottom {
   display: flex;
