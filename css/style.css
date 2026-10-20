@@ -980,3 +980,21 @@ strong {
     transform: none;
   }
 }
+
+.content_mo { 
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.skill-symbol--react {
+  width: 57px;
+  height: 57px;
+}
+
+.skill-symbol--react svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4.5;
+}
