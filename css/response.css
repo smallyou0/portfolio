@@ -1,85 +1,395 @@
-@charset "utf-8";
-
-
-@media all and (max-width:1200px){
-	#section3>div>ul>li{height:300px;}
-	#section3>div>ul>li>div>a{width:100%; height:280px; overflow:hidden;}
+/* Responsive overrides — desktop / tablet / mobile */
+@media (min-width: 1441px) {
+  .hero h1 {
+    font-size: 114px;
+  }
 }
 
-@media all and (max-width:1000px){
-	.pc{display:none;}
-	.mobile{display:block;}
-	
-	#section3>div>ul>li{width:33.3333%; height:350px; margin-bottom:30px;}
-	
-	.skill-wrap>li{float:left; width:33.333%; margin-top:5px;}
-	
+@media (max-width: 1190px) {
+  .hero h1 {
+    font-size: clamp(52px, 7.5vw, 96px);
+  }
+  .project-visual {
+    height: 380px;
+    min-height: 320px;
+    padding-inline: 25px;
+  }
+  .project-visual--split {
+    padding-inline: 20px;
+  }
+  .project-showcase--paired {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: 14px;
+  }
+  .project-panel--only {
+    width: min(46%, 220px);
+  }
+  .browser-frame {
+    height: 82%;
+  }
+  .project-card--wide .project-visual {
+    height: 430px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .skill-item {
+    min-height: 265px;
+  }
 }
 
-@media all and (max-width:950px){
-	/* 섹션2 */
-	.content-img-wrap{float:none; width:80%; margin:0 10%;}
-	.content-txt-wrap{float:none; width:80%; margin:0 10%;}
+@media (max-width: 800px) {
+  :root {
+    --edge: 24px;
+  }
+  .site-header {
+    height: 70px;
+  }
+  html {
+    scroll-padding-top: 70px;
+  }
+  .menu-toggle {
+    position: relative;
+    z-index: 103;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 19px;
+    height: 2px;
+    background: var(--ink);
+    transition: transform .25s ease;
+  }
+  .menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(4px) rotate(45deg);
+  }
+  .menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+  .main-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100svh - 70px);
+    padding: 40px var(--edge) 80px;
+    background: var(--bg);
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+  .main-nav.is-open {
+    display: flex;
+  }
+  .main-nav a {
+    padding: 20px 0;
+    font-size: 26px;
+    letter-spacing: -.04em;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero {
+    min-height: 720px;
+    padding-top: 120px;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 8vw, 75px);
+  }
+  .hero-index {
+    display: none;
+  }
+  .hero-bottom {
+    margin-top: 42px;
+    gap: 35px;
+  }
+  .section-intro h2, .skills-head h2 {
+    font-size: clamp(42px,7vw,64px);
+  }
+  .section-intro {
+    align-items: start;
+  }
+  .project-visual {
+    height: clamp(290px,40vw,365px);
+    min-height: 275px;
+    padding-inline: 20px;
+  }
+  .project-visual--split {
+    padding-inline: 18px;
+  }
+  .project-showcase--paired {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: 14px;
+  }
+  .project-panel--only {
+    width: min(48%, 205px);
+  }
+  .browser-frame {
+    height: 82%;
+  }
+  .project-visual--mobile .phone-frame {
+    width: 150px;
+  }
+  .project-card--wide {
+    gap: 30px;
+  }
+  .project-card--wide .project-visual {
+    height: 385px;
+  }
+  .about-layout {
+    gap: 40px;
+    grid-template-columns: .95fr 1fr;
+  }
+  .about-layout h2 {
+    font-size: clamp(42px,5.8vw,63px);
+  }
+  .about-text {
+    padding-top: 42px;
+  }
 }
 
-@media all and (max-width:800px){
-	/* 섹션1 */
-	#svgAni-wrap{display:none;}
-	.info{z-index:2; position:absolute; top:45%; left:20%; margin-left:0; width:60%;}
-	
-	#section3>div>ul>li{width:50%; height:350px; }
-	#section3>div>ul.banner>li{height:130px;}
-
+@media (max-width: 640px) {
+  :root {
+    --edge: 20px;
+  }
+  .section-space {
+    padding-block: 94px;
+  }
+  .hero {
+    min-height: min(750px, calc(100svh - 70px));
+    padding-top: 90px;
+  }
+  .hero-heading {
+    margin-top: 35px;
+  }
+  .hero-overline {
+    font-size: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 8.7vw, 63px);
+    letter-spacing: -.08em;
+    line-height: 1.1;
+  }
+  .hero-heading-second {
+    white-space: normal;
+  }
+  .hero-bottom {
+    align-items: start;
+    flex-direction: column;
+    gap: 27px;
+    margin-top: 36px;
+    padding-bottom: 60px;
+  }
+  .hero-description {
+    font-size: 15px;
+  }
+  .hero-bottomline {
+    align-items: center;
+  }
+  .hero-bottomline > span {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+  .hero-bottomline a {
+    font-size: 8px;
+    letter-spacing: .025em;
+  }
+  .hero-bottomline a span {
+    margin-left: 4px;
+  }
+  .section-intro {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 33px;
+  }
+  .section-intro h2, .skills-head h2 {
+    margin-top: 13px;
+    font-size: clamp(38px, 10vw, 56px);
+  }
+  .section-aside {
+    text-align: left;
+  }
+  .section-aside p {
+    margin-top: 3px;
+  }
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 58px;
+  }
+  .project-visual {
+    height: clamp(310px, 78vw, 480px);
+    padding-inline: 35px;
+  }
+  .project-visual--split {
+    height: auto;
+    min-height: 0;
+    padding: 56px 18px 18px;
+  }
+  .project-showcase {
+    height: auto;
+    margin-top: 10px;
+  }
+  .project-showcase--paired {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+  .project-panel--mobile {
+    align-self: start;
+    width: 100%;
+  }
+  .project-panel--only {
+    width: min(52%, 220px);
+  }
+  .browser-frame {
+    max-height: 360px;
+    height: 80%;
+  }
+  .screenshot-fallback strong {
+    font-size: clamp(22px, 5.5vw, 38px);
+  }
+  .project-visual--mobile .phone-frame {
+    width: clamp(160px, 38vw, 210px);
+  }
+  .screenshot-fallback--phone strong {
+    font-size: 20px;
+  }
+  .project-card--wide {
+    grid-column: auto;
+    display: block;
+  }
+  .project-card--wide .project-visual {
+    height: clamp(310px,78vw,480px);
+  }
+  .project-card--wide .project-information {
+    padding: 24px 0 0;
+  }
+  .project-card--wide .project-title-row h3 {
+    font-size: 29px;
+  }
+  .project-information {
+    padding-top: 20px;
+  }
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .about-layout h2 {
+    margin-top: 22px;
+    font-size: clamp(45px, 10vw, 60px);
+  }
+  .about-text {
+    padding-top: 32px;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 38px;
+  }
+  .skill-item {
+    min-height: 220px;
+  }
+  .skill-item h3 {
+    margin-top: 30px;
+  }
+  .footer-top h2 {
+    font-size: clamp(43px,10.4vw,67px);
+  }
+  .footer-contact-circle {
+    width: 68px;
+    height: 68px;
+    font-size: 30px;
+  }
+  .footer-contacts {
+    margin: 45px 0 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .footer-bottom span {
+    order: 3;
+    width: 100%;
+  }
 }
 
-@media all and (max-width:750px){
-	/* 섹션2 */
-	.content-wrap{padding-bottom:80px;}
-	.content-txt-wrap>ul>li>h3{font-size:45px;}
-	.content-txt-wrap>ul>li>h4{font-size:20px;}
-
+@media (max-width: 390px) {
+  .brand {
+    font-size: 13px;
+  }
+  .hero h1 {
+    font-size: clamp(37px, 10.15vw, 43px);
+  }
+  .hero-label {
+    font-size: 9px;
+  }
+  .hero-bottomline {
+    font-size: 9px;
+  }
+  .visual-category {
+    left: 15px;
+    top: 17px;
+    font-size: 8px;
+  }
+  .project-visual {
+    padding-inline: 20px;
+  }
+  .project-visual--split {
+    padding-inline: 14px;
+  }
+  .project-device-label {
+    font-size: 9px;
+  }
+  .project-panel--mobile {
+    width: 100%;
+  }
+  .project-panel--only {
+    width: min(58%, 210px);
+  }
+  .project-facts {
+    font-size: 11px;
+  }
+  .project-facts span + span::before {
+    margin-inline: 7px;
+  }
+  .footer-top {
+    align-items: start;
+  }
+  .footer-contact-circle {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+  }
 }
 
-@media all and (max-width:700px){
-	#section3>div>ul>li{width:50%; height:330px;}
-	#section3>div>ul>li>div>a{width:100%; height:280px; overflow:hidden;}
-	
-	#section3>div>ul.banner{padding-bottom:30px;}
-	#section3>div>ul.banner>li{float:float; height:auto; }
-	#section3>div>ul.banner>li:nth-child(1){width:50%;}
-	#section3>div>ul.banner>li:nth-child(2){width:50%;}
-	#section3>div>ul.banner>li:nth-child(3){width:50%;}
+/* Larger matching mobile previews, flush with the card bottom. */
+.project-visual.project-visual--single {
+  min-height: 490px;
+  padding-bottom: 0;
 }
-
-@media all and (max-width:700px){
-	#section3>div>ul>li{width:100%; height:auto;}
-	#section3>div>ul>li>div>a{width:100%; height:auto; overflow:hidden; margin-bottom:15px;}
-	#section3>div>ul>li:nth-child(4)>div>a>img{width:100%; height:auto;}
-	
-	/* #section3>div>ul.banner>li{float:none; width:100%; height:180px; margin:0 5%;} */
+.project-visual--single .project-showcase--single {
+  height: auto;
+  margin-top: 0;
+  align-self: flex-end;
 }
-
-@media all and (max-width:630px){
-	.info>ul>li>br{display:none;}
+.project-visual--single .project-panel--only {
+  width: min(300px, 100%);
+  align-self: end;
 }
-
-@media all and (max-width:500px){
-	/* #section3>div>ul.banner>li>div>img{width:100%; max-width:100%;} */
-	#section3>div>ul.banner>li{float:none; height:auto; }
-	#section3>div>ul.banner>li:nth-child(1){width:100%;}
-	#section3>div>ul.banner>li:nth-child(2){width:100%;}
-	#section3>div>ul.banner>li:nth-child(3){width:100%;}
-}
-
-
-@media all and (max-width:400px){
-	.section>div>h2{padding:20px 0;}
-	
-	/* 섹션2 */
-	.content-wrap{padding-bottom:40px;}
-	.content-txt-wrap>ul>li>h3{font-size:30px;}
-	.content-txt-wrap>ul>li>h4{font-size:16px;}
-	
-	/* #section3>div>ul.banner>li{height:130px;} */
-	.skill-wrap>li>div>p>em:nth-child(2){display:none;}
+.project-visual--single .project-screen--mobile-only {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  flex: none;
 }
