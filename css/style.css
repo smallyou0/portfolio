@@ -26,7 +26,7 @@ html {
 }
 body {
   margin: 0;
-  min-width: 320px;
+  /* min-width: 320px; */
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-ko);
@@ -982,6 +982,7 @@ strong {
 }
 
 .content_mo { 
+  width: 100%;
   display: block;
   max-width: 500px;
   margin: 0 auto;
